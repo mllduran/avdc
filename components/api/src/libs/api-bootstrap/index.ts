@@ -1,0 +1,1 @@
+export { setupMainApp } from './main-app'
