@@ -1,6 +1,6 @@
 import { ErrorRequestHandler } from 'express'
 
-export const createDefaultErrorHandler = (logger): ErrorRequestHandler => {
+export const createDefaultErrorHandler = (logger: any): ErrorRequestHandler => {
   return (err, req, res, next) => {
     console.log(err.stack)
 

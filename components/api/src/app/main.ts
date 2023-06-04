@@ -1,9 +1,13 @@
+import 'module-alias/register';
 import { Express } from "express"
 import { setupMainApp } from "../libs/api-bootstrap"
 import { rootLogger } from "./shared"
 import { setupRoutes } from './routes'
+import { createConfig } from './shared/config'
 
 const logger = rootLogger
+
+const config = createConfig({})
 
 const listen = (app: Express, name: string, port: number) => {
   return app.listen(port, () => {

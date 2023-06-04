@@ -7,7 +7,7 @@ export const setupRoutes = (router: Router) => {
     res.send("HELLO WORLD")
   })
 
-  router.get('/accounts', accountsRoute.getAccounts)
+  router.get('/accounts', accountsRoute.get)
 
-  // router.use(errorHandler)
+  router.use(errorHandler)
 }
